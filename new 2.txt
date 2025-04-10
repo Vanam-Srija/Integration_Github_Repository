@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+            xmlns="" 
+            elementFormDefault="qualified" 
+            targetNamespace="">
+
+  <xsd:element name="root">
+    <xsd:complexType mixed="true">
+      <xsd:sequence>
+        <xsd:element name="Insert_Statement1" minOccurs="0">
+          <xsd:complexType mixed="true">
+            <xsd:sequence>
+              <xsd:element name="dbTableName" minOccurs="0">
+                <xsd:complexType mixed="true">
+                  <xsd:sequence>
+                    <xsd:element name="table" minOccurs="0" type="xsd:normalizedString"/>
+                    <xsd:element name="access" minOccurs="0" maxOccurs="unbounded">
+                      <xsd:complexType mixed="true">
+                        <xsd:sequence>
+                          <xsd:element name="CompanyName" minOccurs="0" type="xsd:string"/>
+                          <xsd:element name="ContactTitle" minOccurs="0" type="xsd:string"/>
+                          <xsd:element name="Address" minOccurs="0" type="xsd:string"/>
+                          <xsd:element name="PostalCode" minOccurs="0" type="xsd:string"/>
+                          <xsd:element name="Phone" minOccurs="0" type="xsd:string"/>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                  <xsd:attribute name="action" type="xsd:normalizedString" use="required"/>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>
